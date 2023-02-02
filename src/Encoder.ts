@@ -200,6 +200,12 @@ export default class Encoder {
   get bytes(): Uint8Array {
     return this.#bytes;
   }
+
+  get blob(): Blob {
+    return new Blob([this.#bytes], {
+      type: "image/qoi"
+    });
+  }
 }
 
 function byteDiff(a: number, b: number) {
