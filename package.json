@@ -1,0 +1,24 @@
+{
+  "name": "qoi",
+  "version": "1.0.0",
+  "description": "QOI Utilities Implemented in Typescript.",
+  "main": "index.js",
+  "author": "Cohen Erickson <contact@cohenerickson.com>",
+  "license": "ISC",
+  "scripts": {
+    "dev": "webpack serve --mode=development --client-web-socket-url-port=443",
+    "build": "webpack --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cohenerickson/QOI.git"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
