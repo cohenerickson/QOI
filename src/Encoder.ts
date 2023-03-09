@@ -60,11 +60,7 @@ export default class Encoder {
   }
 
   #encode(data: Uint8Array): void {
-    let previous: Uint8Array = new Uint8Array(4);
-    previous[0] = 0;
-    previous[1] = 0;
-    previous[2] = 0;
-    previous[3] = 255;
+    let previous: Uint8Array = new Uint8Array([0, 0, 0, 255]);
 
     let index = new Uint8Array(64 * 4);
 

@@ -40,7 +40,7 @@ export default class Decoder {
 
     this.#channels = this.#shift() as number;
     if (![3, 4].includes(this.#channels)) {
-      throw new Error("Invalid Channels");
+      throw new Error("Invalid Channel");
     }
 
     this.#colorspace = this.#shift() as number;
@@ -48,17 +48,28 @@ export default class Decoder {
       throw new Error("Invalid Colorspace");
     }
 
+    
+
     this.#decode();
   }
 
   #decode() {
-    const index = new Uint8Array(64 * 4);
+    let previous: Uint8Array = new Uint8Array([0, 0, 0, 255]);
 
-    for (let i = 0; i < this.#binary.length; i++) {}
+    let index = new Uint8Array(64 * 4);
+
+    let run = 0;
+
+    let pointer = 0;
+
+    while (pointer < this.#binary.length) {
+
+    }
   }
 
   #shift(amount?: number): number | Uint8Array {
     let returnValue: number | Uint8Array;
+
     if (amount && amount > 1) {
       const values: number[] = [];
       for (let i = 0; i < amount; i++) {
